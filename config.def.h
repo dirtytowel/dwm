@@ -18,7 +18,8 @@ static int vertpad            = 4;       /* vertical padding of bar */
 static int sidepad            = 4;       /* horizontal padding of bar */
 static int usealtbar          = 1;        /* 1 means use non-dwm status bar */
 static char *altbarclass      = "Polybar"; /* Alternate bar class name */
-static char *altbarcmd        = "$HOME/.scripts/polybar.sh"; /* Alternate bar launch command */
+//static char *altbarcmd        = "$HOME/.scripts/polybar.sh"; /* Alternate bar launch command */
+static char *altbarcmd        = "/usr/bin/polybarstart"; /* Alternate bar launch command */
 static char font[]            = "Hack Nerd Font Mono:style=Regular:size=10";
 static char dmenufont[]       = "Hack Nerd Font Mono:style=Regular:size=10";
 static const char *fonts[]    = { font };
