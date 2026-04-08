@@ -17,9 +17,8 @@ static int topbar             = 1;        /* 0 means bottom bar */
 static int vertpad            = 4;       /* vertical padding of bar */
 static int sidepad            = 4;       /* horizontal padding of bar */
 static int usealtbar          = 1;        /* 1 means use non-dwm status bar */
-static char *altbarclass      = "Polybar"; /* Alternate bar class name */
-//static char *altbarcmd        = "$HOME/.scripts/polybar.sh"; /* Alternate bar launch command */
-static char *altbarcmd        = "/usr/bin/polybarstart"; /* Alternate bar launch command */
+static char altbarclass[256]  = "Polybar"; /* Alternate bar class name */
+static char altbarcmd[256]    = "/usr/local/bin/polybar.sh"; /* Alternate bar launch command */
 static char font[]            = "Hack Nerd Font Mono:style=Regular:size=10";
 static char dmenufont[]       = "Hack Nerd Font Mono:style=Regular:size=10";
 static const char *fonts[]    = { font };
@@ -96,6 +95,8 @@ ResourcePref resources[] = {
        { "sidepad",            INTEGER, &sidepad },
 
        { "usealtbar",          INTEGER, &usealtbar },
+       { "altbarclass",        STRING,  &altbarclass },
+       { "altbarcmd",          STRING,  &altbarcmd },
 
        { "borderpx",           INTEGER, &borderpx },
        { "snap",               INTEGER, &snap },
